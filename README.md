@@ -1,5 +1,5 @@
 <div id="header" align="center">
-    <h1 align="center">Hola👋 Soy</h1>
+    <h1 align="center">Hola👋 Soy Andrés Tacuamán</h1>
     <img src="https://i.postimg.cc/pVZBhvmw/logo.png" width="200">
     <h3 align="center">Estudiante de la Universidad Técnica de Ambato</h3>
 </div>
