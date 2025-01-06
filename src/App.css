@@ -1,0 +1,13 @@
+/* Estilos generales para la aplicación */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Estilo para cuando el foco está en el campo de juego */
+.cancha:focus {
+  outline: none;
+}

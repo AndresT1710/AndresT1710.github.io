@@ -1,0 +1,180 @@
+/* Estilo del campo */
+.cancha {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('https://cdn.pixabay.com/photo/2015/05/28/01/52/court-787406_1280.jpg') no-repeat center/cover;
+  outline: none;
+  overflow: visible; /* Cambiado de hidden a visible */
+}
+
+/* Estilo de los arcos */
+.arc-left,
+.arc-right {
+  position: absolute;
+  width: 8%;
+  height: 25%;
+  background-color: rgba(255, 255, 255, 0.082);
+  border: 6px solid rgb(255, 255, 255);
+  top: 40%;
+}
+
+.arc-left {
+  left: 0;
+}
+
+.arc-right {
+  right: 0;
+}
+
+/* Estilo del jugador */
+.player {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('https://i5.walmartimages.com/asr/be6e498a-0092-47ac-b974-7e740ab6d304.54047ed91f7f335b95d917c7c8e3e170.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF') no-repeat center/cover;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: all; /* Asegura que el jugador pueda interactuar */
+}
+
+/* Estilo del balón */
+.ball {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: url('https://mediarsstore.realsociedad.eus/2267-home_default/laligako-baloia-2324-orbita-txikia.jpg') no-repeat center/cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo del contenido dinámico */
+.content {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);  /* Fondo oscuro y semitransparente */
+  color: white;  /* Texto blanco */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out; /* Efecto de fade in/out */
+  opacity: 0; /* Inicialmente invisible */
+}
+
+.content.visible {
+  opacity: 1; /* Hacer visible cuando se activa */
+}
+
+/* Animación para el cartel de gol */
+@keyframes showGoal {
+  0% {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Estilo para hacer visible el mensaje */
+.content.visible {
+  animation: showGoal 0.5s ease-in-out;
+}
+
+.content a {
+  text-decoration: none;
+  color: #ffffff; /* Color verde */
+  font-size: 1.2em; /* Tamaño de la fuente */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  transition: color 0.3s ease-in-out;
+}
+
+.content p {
+  text-decoration: none;
+  color: #ffffff; /* Color verde */
+  font-size: 1.2em; /* Tamaño de la fuente */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  transition: color 0.3s ease-in-out;
+}
+
+
+.content a:hover {
+  color: #075b69; /* Color al pasar el ratón */
+}
+
+.content h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #016fec; /* Color amarillo */
+  font-size: 1.5em; /* Tamaño de la fuente */
+  margin-bottom: 10px;
+}
+
+.content strong{
+  list-style-type: none;
+  padding: 0;
+  color: white;
+}
+
+.content li {
+  margin: 5px 0;
+  list-style-type: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+}
+
+.modal-content h2 {
+  margin: 0 0 10px;
+}
+
+.modal-content p {
+  margin: 0;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin: 5px 0;
+}
+
+.modal-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
